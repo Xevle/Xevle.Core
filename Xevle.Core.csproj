@@ -35,9 +35,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\ICopy.cs" />
+    <Compile Include="Generics\Pair.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Interfaces\" />
+    <Folder Include="Generics\" />
   </ItemGroup>
 </Project>
