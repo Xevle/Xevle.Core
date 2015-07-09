@@ -7,6 +7,9 @@ namespace Xevle.Core
 	/// </summary>
 	public interface ICopy<T>
 	{
+		/// <summary>
+		/// Copy the instance of T and with all internals.
+		/// </summary>
 		T Copy();
 	}
 }
