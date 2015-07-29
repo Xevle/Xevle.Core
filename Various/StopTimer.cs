@@ -2,16 +2,32 @@
 
 namespace Xevle.Core
 {
+	/// <summary>
+	/// Stop timer class to stop times.
+	/// </summary>
 	public class StopTimer
 	{
 		#region Private variables
+		/// <summary>
+		/// The start time.
+		/// </summary>
 		Int64 startTime;
+
+		/// <summary>
+		/// The stop time.
+		/// </summary>
 		Int64 stopTime;
 
+		/// <summary>
+		/// The state of the timer.
+		/// </summary>
 		StopTimerState timerState;
 		#endregion
 
 		#region Constructor
+		/// <summary>
+		/// Initializes a new instance of the <see cref="Xevle.Core.StopTimer"/> class.
+		/// </summary>
 		public StopTimer()
 		{
 			startTime = 0;
@@ -184,4 +200,3 @@ namespace Xevle.Core
 		#endregion
 	}
 }
-
