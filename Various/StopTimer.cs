@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Xevle.Core
+namespace Xevle.Core.Various
 {
 	/// <summary>
 	/// Stop timer class to stop times.

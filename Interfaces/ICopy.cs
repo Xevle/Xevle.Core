@@ -13,4 +13,3 @@ namespace Xevle.Core
 		T Copy();
 	}
 }
-

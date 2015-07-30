@@ -22,7 +22,9 @@ namespace Xevle.Core.Generics
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Xevle.Pair`1"/> class.
 		/// </summary>
-		public Pair() { }
+		public Pair()
+		{
+		}
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Xevle.Pair`1"/> class.
@@ -31,8 +33,8 @@ namespace Xevle.Core.Generics
 		/// <param name="second">Second instance</param>
 		public Pair(T first, T second)
 		{
-			First=first;
-			Second=second;
+			First = first;
+			Second = second;
 		}
 
 		/// <summary>
@@ -43,10 +45,10 @@ namespace Xevle.Core.Generics
 		/// otherwise, <c>false</c>.</returns>
 		public override bool Equals(object obj)
 		{
-			if(obj==null) return false;
+			if (obj == null) return false;
 
-			Pair<T> o=(Pair<T>)obj;
-			return First.Equals(o.First)&&Second.Equals(o.Second);
+			Pair<T> o = (Pair<T>)obj;
+			return First.Equals(o.First) && Second.Equals(o.Second);
 		}
 
 		/// <summary>
@@ -55,14 +57,14 @@ namespace Xevle.Core.Generics
 		/// <returns>A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a hash table.</returns>
 		public override int GetHashCode()
 		{
-			if((object)First==null)
+			if ((object)First == null)
 			{
-				if((object)Second==null) return 0;
-				return (-1)^Second.GetHashCode();
+				if ((object)Second == null) return 0;
+				return (-1) ^ Second.GetHashCode();
 			}
 
-			if((object)Second==null) return First.GetHashCode();
-			return First.GetHashCode()^Second.GetHashCode();
+			if ((object)Second == null) return First.GetHashCode();
+			return First.GetHashCode() ^ Second.GetHashCode();
 		}
 	}
 }

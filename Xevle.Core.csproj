@@ -20,6 +20,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -28,6 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -38,11 +40,37 @@
     <Compile Include="Generics\Pair.cs" />
     <Compile Include="Various\StopTimer.cs" />
     <Compile Include="Various\StopTimerState.cs" />
+    <Compile Include="Extensions\IntegerArithmeticsExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\StringSplitExtensions.cs" />
+    <Compile Include="Collections\Bitfield.cs" />
+    <Compile Include="Collections\Parameters.cs" />
+    <Compile Include="Collections\Generic\LongHashSet.cs" />
+    <Compile Include="Collections\Generic\LongList.cs" />
+    <Compile Include="Collections\Generic\PriorityQueue.cs" />
+    <Compile Include="Collections\Generic\ReadOnlyList.cs" />
+    <Compile Include="Collections\Internal\ParametersToPDLConverter.cs" />
+    <Compile Include="Collections\Internal\PDLParser.cs" />
+    <Compile Include="Exceptions\TextParserException.cs" />
+    <Compile Include="Events\ThreadSafeEvent.cs" />
+    <Compile Include="DataTypes\UInt128.cs" />
+    <Compile Include="DataTypes\BitOrder.cs" />
+    <Compile Include="DataTypes\Bits.cs" />
+    <Compile Include="DataTypes\ByteOrder.cs" />
+    <Compile Include="DataTypes\BitConverter.cs" />
+    <Compile Include="Various\IDGenerator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Interfaces\" />
     <Folder Include="Generics\" />
     <Folder Include="Various\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Collections\" />
+    <Folder Include="Collections\Generic\" />
+    <Folder Include="Collections\Internal\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Events\" />
+    <Folder Include="DataTypes\" />
   </ItemGroup>
 </Project>
