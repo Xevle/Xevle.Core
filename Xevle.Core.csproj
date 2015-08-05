@@ -59,6 +59,7 @@
     <Compile Include="DataTypes\ByteOrder.cs" />
     <Compile Include="DataTypes\BitConverter.cs" />
     <Compile Include="Various\IDGenerator.cs" />
+    <Compile Include="Various\Assembly.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
