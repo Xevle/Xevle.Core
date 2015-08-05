@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Xevle.Core
+namespace Xevle.Core.Extensions
 {
 	public static class IListExtensions
 	{

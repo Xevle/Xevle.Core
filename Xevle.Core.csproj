@@ -61,6 +61,8 @@
     <Compile Include="Various\IDGenerator.cs" />
     <Compile Include="Various\Assembly.cs" />
     <Compile Include="Extensions\IListExtensions.cs" />
+    <Compile Include="Exceptions\ItemNotFoundException.cs" />
+    <Compile Include="Exceptions\NotSupportedCompressionException.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
