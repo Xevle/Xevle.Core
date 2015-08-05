@@ -1235,7 +1235,7 @@ namespace Xevle.Core.Collections
 		/// <returns>The requested object, if successful; otherwise, <paramref name="std"/>.</returns>
 		public int GetInt32(string name, int std = 0)
 		{
-			return (int)GetInt(name, std);
+			return (int)GetInt64(name, std);
 		}
 
 		/// <summary>
@@ -1244,7 +1244,7 @@ namespace Xevle.Core.Collections
 		/// <param name="name">The path to the object.</param>
 		/// <param name="std">Fallback value.</param>
 		/// <returns>The requested object, if successful; otherwise, <paramref name="std"/>.</returns>
-		public long GetInt(string name, long std = 0)
+		public long GetInt64(string name, long std = 0)
 		{
 			object o = Get(name, std);
 
@@ -1336,7 +1336,7 @@ namespace Xevle.Core.Collections
 		/// <param name="name">The path to the object.</param>
 		/// <param name="std">Fallback value.</param>
 		/// <returns>The requested object, if successful; otherwise, <paramref name="std"/>.</returns>
-		public List<long> GetIntList(string name, List<long> std = null)
+		public List<long> GetInt64List(string name, List<long> std = null)
 		{
 			object o = Get(name, std);
 
