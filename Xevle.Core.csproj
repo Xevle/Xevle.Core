@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="Extensions\IListExtensions.cs" />
     <Compile Include="Exceptions\ItemNotFoundException.cs" />
     <Compile Include="Exceptions\NotSupportedCompressionException.cs" />
+    <Compile Include="Helper\DebugHelper.cs" />
+    <Compile Include="Extensions\XmlDocumentExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -76,5 +79,6 @@
     <Folder Include="Exceptions\" />
     <Folder Include="Events\" />
     <Folder Include="DataTypes\" />
+    <Folder Include="Helper\" />
   </ItemGroup>
 </Project>

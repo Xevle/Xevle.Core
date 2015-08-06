@@ -541,6 +541,51 @@ namespace Xevle.Core.Collections
 				return ilist[idx];
 			}
 		}
+
+		public List <string > GetDump(int level = 0)
+		{
+			return GetDump(this, level);
+		}
+
+		static List< string> GetDump(Parameters root, int level = 0)
+		{
+			List< string> ret = new List< string>();
+
+			foreach (string name in root.Keys)
+			{
+				object obj = root.Get(name);
+				string padding = "".PadLeft(level * 2);
+
+				if (obj is Parameters)
+				{
+					ret.Add(string.Format("{0}{1}", padding, name));
+					ret.AddRange(GetDump((Parameters)obj, level + 1));
+				}
+				else if (obj is IList)
+				{
+					ret.Add(string.Format("{0}{1}", padding, name));
+
+					int count = 0;
+					foreach (object listObject in ( IList)obj)
+					{
+						if (listObject is Parameters) ret.AddRange(GetDump((Parameters)listObject, level + 1));
+						else ret.Add(string.Format("{0}  [{1}]:{2}", padding, count, obj));
+
+						count++;
+					}
+				}
+				else if (obj is byte[])
+				{
+					ret.Add(string.Format("{0}{1}:byte[{2}]", padding, name, ((byte[])obj).Length));
+				}
+				else
+				{
+					ret.Add(string.Format("{0}{1}:{2}", padding, name, obj));
+				}
+			}
+
+			return ret;
+		}
 		#endregion
 
 		#region Put
